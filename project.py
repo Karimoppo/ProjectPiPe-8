@@ -346,9 +346,8 @@ while True:
     Y = 0
     A = 0
     list_planets = ("TRAPPIST-1e", "Kepler-452b")
-    print_pause(
-        "Hi you are at planet " + random.choice(list_planets) + " the year is 2200", 2
-    )
+    hiyp = "Hi you are at planet "
+    print_pause(hiyp + random.choice(list_planets) + " the year is 2200", 2)
     print_pause("You have a hard mission", 2)
     print_pause("Your mission is to find one of the items on the list", 2)
     print_pause("Water or Minerals", 1)
@@ -440,7 +439,7 @@ while True:
                 Z = 1
             elif CV == 1:
                 if MonsterYN == False:
-                    print_pause("While going inside the cave you have found", 2)
+                    print_pause("While going inside  you have found", 2)
                     print_pause("The minerals that were on the list", 2)
                     print_pause("You took them and went to the base", 2)
                     print_pause("The minerals you have collected ", 2)
