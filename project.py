@@ -165,7 +165,7 @@ def run(MonsterYN, MonsterST, S1C1, S1C2, S1A1, S1A2, Score, Ending):
             print_pause(f"This ending is the good ending number {EndingNO}", 2)
             print_pause("There are two good ending", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -175,7 +175,7 @@ def run(MonsterYN, MonsterST, S1C1, S1C2, S1A1, S1A2, Score, Ending):
             print_pause("GAME OVER", 1)
             print_pause("Are you ready for another adventure", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -226,7 +226,7 @@ def take_photo(MonsterST, Ending):
             print_pause("There are two good ending", 2)
             print_pause("Are you ready for another adventure", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -244,7 +244,7 @@ def take_photo(MonsterST, Ending):
             print_pause("This is the only neutral ending", 1)
             print_pause("Are you ready for another adventure", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -256,7 +256,7 @@ def take_photo(MonsterST, Ending):
         print_pause("GAME OVER", 1)
         print_pause("Are you ready for another adventure", 2)
         End = end_game(Score)
-        if End == True:
+        if End is True:
             return End
         else:
             print("-----")
@@ -289,7 +289,7 @@ def sneak(MonsterST, MonsterYN, Ending):
             print_pause("GAME OVER", 1)
             print_pause("Are you ready for another adventure", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -304,7 +304,7 @@ def sneak(MonsterST, MonsterYN, Ending):
             print_pause("There are two good ending", 2)
             print_pause("Are you ready for another adventure", 2)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 return End
             else:
                 print("-----")
@@ -325,7 +325,7 @@ def sneak(MonsterST, MonsterYN, Ending):
         print_pause("There are two good ending", 2)
         print_pause("Are you ready for another adventure", 2)
         End = end_game(Score)
-        if End == True:
+        if End is True:
             return End
         else:
             print("-----")
@@ -404,7 +404,7 @@ while True:
                         print_score(Score)
                         End = end_game(Score)
                         print(End)
-                        if End == True:
+                        if End is True:
                             m = 1
                             break
                         else:
@@ -425,7 +425,7 @@ while True:
                         print_pause("Are you ready for another adventure", 2)
                         print_score(Score)
                         End = end_game(Score)
-                        if End == True:
+                        if End is True:
                             break
                         Z = ""
                     elif X == "2":
@@ -434,11 +434,11 @@ while True:
                         ListDS = sleeping(lDS1, lDS3, Day, lDS4, Score)
                         Day = ListDS[0]
                         Score = ListDS[1]
-                    if End == True:
+                    if End is True:
                         break
                 Z = 1
             elif CV == 1:
-                if MonsterYN == False:
+                if MonsterYN is False:
                     print_pause("While going inside  you have found", 2)
                     print_pause("The minerals that were on the list", 2)
                     print_pause("You took them and went to the base", 2)
@@ -451,11 +451,11 @@ while True:
                     print_pause("Are you ready for another adventure", 2)
                     print_score(Score)
                     End = end_game(Score)
-                    if End == True:
+                    if End is True:
                         break
                     else:
                         print("")
-                elif MonsterYN == True:
+                elif MonsterYN is True:
                     if MonsterST == "Real":
                         print_pause("While going inside the cave ", 2)
                         print_pause("You saw a strange silhouette", 2)
@@ -483,7 +483,7 @@ while True:
                                 E = Ending
                                 end = run(MYN, MST, lDS1, lDS3, D, lDS4, S, E)
                                 print_score(Score)
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
@@ -492,14 +492,14 @@ while True:
                             elif X == "2":
                                 end = take_photo(MonsterST, Ending)
                                 print_score(Score)
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
                             elif X == "3":
                                 end = sneak(MonsterST, MonsterYN, Ending)
                                 print_score(Score)
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
@@ -533,7 +533,7 @@ while True:
                                 E = Ending
                                 end = run(MYN, MST, re1, re1, D, re3, S, E)
                                 print_score(Score)
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
@@ -542,14 +542,14 @@ while True:
                             elif X == "2":
                                 end = take_photo(MonsterST, Ending)
                                 print_score(Score)
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
                             elif X == "3":
                                 end = sneak(MonsterST, MonsterYN, Ending)
                                 print("score")
-                                if End == True:
+                                if End is True:
                                     break
                                 else:
                                     print("---")
@@ -574,7 +574,7 @@ while True:
         MonsterST = ListMYNMMST[2]
         # print(MonsterST)
         # print(Ending)
-        if MonsterYN == False:
+        if MonsterYN is False:
             print_pause("You had some bottles in", 1)
             print_pause("in your backpack", 2)
             print_pause("You have filled the bottles", 2)
@@ -587,11 +587,11 @@ while True:
             print_pause("Are you ready for another adventure", 2)
             print_score(Score)
             End = end_game(Score)
-            if End == True:
+            if End is True:
                 break
             else:
                 print("")
-        elif MonsterYN == True:
+        elif MonsterYN is True:
             if MonsterST == "Fake":
                 print_pause("You saw a strange silhouette", 2)
                 print_pause("The silhouette does not look like a human", 2)
@@ -616,7 +616,7 @@ while True:
                     E = Ending
                     end = run(MYN, MST, re1, re2, D, re3, S, E)
                     print_score(Score)
-                    if End == True:
+                    if End is True:
                         break
                     else:
                         print("---")
@@ -625,14 +625,14 @@ while True:
                 elif X == "2":
                     end = take_photo(MonsterST, Ending)
                     print_score(Score)
-                    if End == True:
+                    if End is True:
                         break
                     else:
                         print("---")
                 elif X == "3":
                     end = sneak(MonsterST, MonsterYN, Ending)
                     print_score(Score)
-                    if End == True:
+                    if End is True:
                         break
                     else:
                         print("---")
@@ -647,7 +647,7 @@ while True:
     else:
         print("Hi")
         break
-    if End == True:
+    if End is True:
         break
     else:
         print("")
